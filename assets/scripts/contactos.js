@@ -11,6 +11,7 @@ contactos.forEach(function (contacto) {
     fila.innerHTML = '<td>' + contacto.codigo + '</td>' +
         '<td>' + contacto.nombre + '</td>' +
         '<td>' + contacto.apellidos + '</td>' +
-        '<td>' + contacto.correo + '</td>';
+        '<td>' + contacto.correo + '</td>' + 
+        '<td>' + '<button><img src="../../assets/resource/img/ver.png" width="32px"></button>' + '<button><img src="../../assets/resource/img/favorite.png" width="32px"></button>' + '</td>';
     tbody.appendChild(fila);
 });
