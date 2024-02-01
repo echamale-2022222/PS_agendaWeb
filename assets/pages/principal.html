@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/styles/principal.css">
+    <title>Principal</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="../../assets/pages/contactos.html" onclick="cargarPagina('../../assets/pages/contactos.html')" target="myFrame">Contactos</a></li>
+            <li><a href="../../assets/pages/detalleContacto.html" onclick="cargarPagina('../../assets/pages/detalleContacto.html')" target="myFrame">Detalle contacto</a></li>
+            <li><a href="../../assets/pages/agregarContacto.html" onclick="cargarPagina('../../assets/pages/agregarContacto.html')" target="myFrame">Nuevo contacto</a></li>
+            <li><a href="../../assets/pages/favoritos.html" onclick="cargarPagina('../../assets/pages/favoritos.html')" target="myFrame">Favoritos</a></li>
+            <li><a href="../../assets/pages/todolist.html" onclick="cargarPagina('../../assets/pages/todolist.html')" target="myFrame">ToDo list</a></li>
+        </ul>
+
+        <div class="dropdown">
+            <button>
+                <img src="../../assets/resource/img/imgLogin.png" alt="" width="50"/>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Invitado@kinal.edu.gt</a>
+                <a href="#">Invitado</a>
+                <div></div>
+                <a class="aH" href="../../index.html">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+    <div style="height: 660px">
+        <iframe name="myFrame" style="height: 100%; width: 100%; border: none" src="../../assets/pages/contactos.html"></iframe>
+    </div>
+
+    <script src="../../assets/scripts/principal.js"></script>
+</body>
+</html>

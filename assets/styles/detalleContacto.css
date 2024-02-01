@@ -1,0 +1,41 @@
+* {
+    font-family: monospace;
+    background-color: #fff;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+}
+
+.tablaVer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tablaVer th, .tablaVer td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.tablaVer th {
+    background-color: #fff;
+}
+
+@media (max-width: 600px) {
+    .tablaVer th, .tablaVer td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

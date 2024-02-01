@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.contenedor {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.tabla {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla th, .tabla td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.tabla th {
+    color: #fff;
+}
+
+.tabla th {
+    background-color: darkgreen;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botones .ver:hover {
+    background: darkgoldenrod;
+    border-radius: 50%;
+}
+
+.botones .fav:hover {
+    background: gold;
+    border-radius: 50%;
+}
+
+
+.botones button {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.tabla-fila:hover {
+    background-color: green;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .tabla th, .tabla td {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .tabla th,
+    .tabla td {
+        font-size: 6px;
+    }
+}
