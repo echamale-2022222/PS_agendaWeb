@@ -15,32 +15,19 @@ contactos.forEach(function (contacto) {
         '<td>' + contacto.nombre + '</td>' +
         '<td>' + contacto.apellidos + '</td>' +
         '<td>' + contacto.correo + '</td>' +
-        '<td class="botones">' + '<button data-codigo="' + contacto.codigo + '" onclick="handleClick(event)">' +
-        '<img class="ver" src="../../assets/resource/img/ver.png" width="32px">' + '</button>' + '<button>' +
-        '<img class="fav" src="../../assets/resource/img/favorite.png" width="32px">' +'</button>' +
+        '<td class="botones">' +
+            '<button data-codigo="' + contacto.codigo + '" onclick="handleClick(event)">' +
+                '<img class="ver" src="../../assets/resource/img/ver.png" width="32px">' +
+            '</button>' +
+            '<button>' +
+                '<img class="fav" src="../../assets/resource/img/favorite.png" width="32px">' +
+            '</button>' +
         '</td>';
+    
+    // Lógica condicional para asignar una imagen diferente a ciertos contactos
+    if (contacto.codigo === 2 || contacto.codigo === 4) {
+        fila.querySelector('.fav').src = '../../assets/resource/img/star.png';
+    }
+
     tbody.appendChild(fila);
-});
-
-
-//Ver contacto
-
-var verContacto = null;
-
-function handleClick(event) {
-    var codigoContacto = event.currentTarget.getAttribute('data-codigo');
-
-    var contactoSeleccionado = contactos.find(function (contacto) {
-        return contacto.codigo == codigoContacto;
-    });
-
-    verContacto = contactoSeleccionado;
-
-    console.log('verContacto:', verContacto);
-}
-
-var botonesVer = document.querySelectorAll('.tablaVer');
-botonesVer.forEach(function (boton) {
-    boton.removeEventListener('click', handleClick);
-    boton.addEventListener('click', handleClick, { once: true });
 });
