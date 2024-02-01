@@ -8,10 +8,11 @@ var tbody = document.querySelector('.tabla tbody');
 
 contactos.forEach(function (contacto) {
     var fila = document.createElement('tr');
+    fila.className = 'tabla-fila';
     fila.innerHTML = '<td>' + contacto.codigo + '</td>' +
         '<td>' + contacto.nombre + '</td>' +
         '<td>' + contacto.apellidos + '</td>' +
         '<td>' + contacto.correo + '</td>' + 
-        '<td>' + '<button><img src="../../assets/resource/img/ver.png" width="32px"></button>' + '<button><img src="../../assets/resource/img/favorite.png" width="32px"></button>' + '</td>';
-    tbody.appendChild(fila);
+        '<td class="botones">' + '<button><img class="ver" src="../../assets/resource/img/ver.png" width="32px"></button>' + '<button><img class="fav" src="../../assets/resource/img/favorite.png" width="32px"></button>' + '</td>';
+        tbody.appendChild(fila);
 });
